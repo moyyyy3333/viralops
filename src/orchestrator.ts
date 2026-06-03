@@ -4,7 +4,7 @@ import logger from './logger.js';
 import { AgentEventBus, Events } from './eventBus.js';
 import { CostTracker } from './costTracker.js';
 import { SupabaseDB } from './db.js';
-import { ClaudeClient } from './claude.js';
+import { DeepSeekClient } from './claude.js';
 import { withRetry, CircuitBreaker } from './utils/retry.js';
 import { FileStorage } from './utils/fileStorage.js';
 
@@ -27,7 +27,7 @@ export class PipelineOrchestrator {
   private eventBus: AgentEventBus;
   private costTracker: CostTracker;
   private db: SupabaseDB;
-  private claude: ClaudeClient;
+  private claude: DeepSeekClient;
   private fileStorage: FileStorage;
   private circuitBreakers: Map<string, CircuitBreaker> = new Map();
 
@@ -45,7 +45,7 @@ export class PipelineOrchestrator {
     this.eventBus = new AgentEventBus(logger);
     this.costTracker = new CostTracker(logger);
     this.db = new SupabaseDB(logger);
-    this.claude = new ClaudeClient(logger);
+    this.claude = new DeepSeekClient(logger);
     this.fileStorage = new FileStorage(logger);
 
     // Circuit breakers for each agent

@@ -29,10 +29,14 @@ function envInt(key: string, defaultValue: number): number {
 }
 
 export const config = {
-  // Anthropic
+  // Anthropic (fallback — prefer DeepSeek)
   anthropicApiKey: env('ANTHROPIC_API_KEY', ''),
   anthropicModel: env('ANTHROPIC_MODEL', 'claude-3-5-sonnet-20241022'),
   anthropicMaxTokens: envInt('ANTHROPIC_MAX_TOKENS', 4096),
+
+  // DeepSeek (primary — cheaper)
+  deepseekApiKey: env('DEEPSEEK_API_KEY', ''),
+  deepseekModel: env('DEEPSEEK_MODEL', 'deepseek-chat'),
 
   // Perplexity
   perplexityApiKey: env('PERPLEXITY_API_KEY', ''),
@@ -74,6 +78,7 @@ export const config = {
   // Derived
   rootDir,
   hasAnthropic: !!env('ANTHROPIC_API_KEY', ''),
+  hasDeepSeek: !!env('DEEPSEEK_API_KEY', ''),
   hasPerplexity: !!env('PERPLEXITY_API_KEY', ''),
   hasSupabase: !!(env('SUPABASE_URL', '') && env('SUPABASE_SERVICE_KEY', '')),
   hasStripe: !!env('STRIPE_SECRET_KEY', ''),
