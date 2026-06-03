@@ -1,0 +1,37 @@
+export declare const config: {
+    readonly anthropicApiKey: string;
+    readonly anthropicModel: string;
+    readonly anthropicMaxTokens: number;
+    readonly perplexityApiKey: string;
+    readonly perplexityModel: string;
+    readonly supabaseUrl: string;
+    readonly supabaseServiceKey: string;
+    readonly stripeSecretKey: string;
+    readonly xApiKey: string;
+    readonly xApiSecret: string;
+    readonly xAccessToken: string;
+    readonly xAccessSecret: string;
+    readonly youtubeApiKey: string;
+    readonly youtubeClientId: string;
+    readonly youtubeClientSecret: string;
+    readonly aisaApiKey: string;
+    readonly tiktokClientKey: string;
+    readonly tiktokClientSecret: string;
+    readonly maxConcurrentAgents: number;
+    readonly defaultRetryCount: number;
+    readonly logLevel: string;
+    readonly outputDir: string;
+    readonly defaultNiche: string;
+    readonly contentTopics: string[];
+    readonly rootDir: string;
+    readonly hasAnthropic: boolean;
+    readonly hasPerplexity: boolean;
+    readonly hasSupabase: boolean;
+    readonly hasStripe: boolean;
+    readonly hasX: boolean;
+    readonly hasYouTube: boolean;
+    readonly hasAISA: boolean;
+    readonly hasTikTok: boolean;
+};
+export default config;
+//# sourceMappingURL=config.d.ts.map

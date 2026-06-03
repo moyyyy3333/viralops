@@ -6,8 +6,8 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
+    "build": "echo build skipped — use tsx",
+    "start": "tsx src/index.ts",
     "run:pipeline": "tsx src/index.ts run",
     "run:research": "tsx src/index.ts run --agent research",
     "run:clip": "tsx src/index.ts run --agent clip",
