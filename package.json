@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "echo build skipped — use tsx",
-    "start": "tsx src/index.ts",
+    "start": "tsx src/index.ts run --loop --interval 300",
     "run:pipeline": "tsx src/index.ts run",
     "run:research": "tsx src/index.ts run --agent research",
     "run:clip": "tsx src/index.ts run --agent clip",
