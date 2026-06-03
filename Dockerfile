@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y ffmpeg yt-dlp && rm -rf /var/lib/apt/li
 
 WORKDIR /app
 COPY package.json package-lock.json* ./
-RUN npm install --omit=dev
+RUN npm install
 COPY . .
 RUN echo "Build complete — using tsx runtime"
 
